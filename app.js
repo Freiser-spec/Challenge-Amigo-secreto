@@ -21,9 +21,11 @@ function actualizarLista() {
     const lista = document.getElementById('listaAmigos');
     lista.innerHTML = '';
 
-    amigos.forEach(amigo => {
+    // Iterar sobre el arreglo amigos
+    for (let i = 0; i < amigos.length; i++) {
+        // Crear un nuevo elemento de lista <li>
         const li = document.createElement('li');
-        li.textContent = amigo;
+        li.textContent = amigos[i];
         lista.appendChild(li);
     });
 }
